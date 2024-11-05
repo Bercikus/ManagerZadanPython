@@ -1,0 +1,15 @@
+python -m pydoc -w zadania
+python -m venv venv
+venv\Scripts\activate
+vnev list
+pip list
+deactivate
+pip freeze > requirements.txt
+
+
+
+
+
+
+
+

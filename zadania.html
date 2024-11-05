@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module zadania</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">zadania</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:d%3A%5Cprogramming%5Cpython%5Csemestr9%5Clabyprogrmaowanie%5Czadanie2%5Czadania.py">d:\programming\python\semestr9\labyprogrmaowanie\zadanie2\zadania.py</a></td></tr></table>
+    <p><span class="code">#uzyto&nbsp;polecenia&nbsp;&nbsp;&nbsp;'python&nbsp;-m&nbsp;pydoc&nbsp;-w'&nbsp;&nbsp;&nbsp;w&nbsp;celu&nbsp;utworzenia&nbsp;dokumentacju</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="json.html">json</a><br>
+</td><td class="multicolumn"><a href="os.html">os</a><br>
+</td><td class="multicolumn"><a href="time.html">time</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="zadania.html#ManagerZadan">ManagerZadan</a>
+</dt><dt class="heading-text"><a href="zadania.html#Zadanie">Zadanie</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="zadania.html#ZadaniePriorytetowe">ZadaniePriorytetowe</a>
+</dt><dt class="heading-text"><a href="zadania.html#ZadanieRegularne">ZadanieRegularne</a>
+</dt></dl>
+</dd>
+</dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="ManagerZadan">class <strong>ManagerZadan</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">Klasa&nbsp;do&nbsp;zarządzania&nbsp;listą&nbsp;zadań.<br>
+&nbsp;<br>
+Oferuje&nbsp;metody&nbsp;do&nbsp;dodawania,&nbsp;usuwania,&nbsp;edytowania&nbsp;oraz&nbsp;zapisywania&nbsp;zadań.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="ManagerZadan-__contains__"><strong>__contains__</strong></a>(self, zadanie)</dt><dd><span class="code">Sprawdza,&nbsp;czy&nbsp;dane&nbsp;zadanie&nbsp;znajduje&nbsp;się&nbsp;w&nbsp;liście&nbsp;zadań.<br>
+&nbsp;<br>
+:param&nbsp;zadanie:&nbsp;<a href="#Zadanie">Zadanie</a>&nbsp;do&nbsp;sprawdzenia.<br>
+:return:&nbsp;True,&nbsp;jeśli&nbsp;zadanie&nbsp;znajduje&nbsp;się&nbsp;w&nbsp;liście,&nbsp;w&nbsp;przeciwnym&nbsp;razie&nbsp;False.</span></dd></dl>
+
+<dl><dt><a name="ManagerZadan-__init__"><strong>__init__</strong></a>(self)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="ManagerZadan-dodajDodatkoweInformacje"><strong>dodajDodatkoweInformacje</strong></a>(self, indeks, **kwargs)</dt><dd><span class="code">Dodaje&nbsp;dodatkowe&nbsp;informacje&nbsp;do&nbsp;istniejącego&nbsp;zadania.<br>
+&nbsp;<br>
+:param&nbsp;indeks:&nbsp;Indeks&nbsp;zadania,&nbsp;do&nbsp;którego&nbsp;dodawane&nbsp;są&nbsp;dodatkowe&nbsp;informacje.<br>
+:param&nbsp;kwargs:&nbsp;Dodatkowe&nbsp;informacje&nbsp;w&nbsp;postaci&nbsp;par&nbsp;klucz-wartość.</span></dd></dl>
+
+<dl><dt><a name="ManagerZadan-dodajZadanie"><strong>dodajZadanie</strong></a>(self, zadanie)</dt><dd><span class="code">Dodaje&nbsp;nowe&nbsp;zadanie&nbsp;do&nbsp;listy.<br>
+&nbsp;<br>
+:param&nbsp;zadanie:&nbsp;Obiekt&nbsp;zadania&nbsp;do&nbsp;dodania.</span></dd></dl>
+
+<dl><dt><a name="ManagerZadan-edytujZadanie"><strong>edytujZadanie</strong></a>(
+    self,
+    indeks,
+    tytul=None,
+    opis=None,
+    termin=None,
+    wykonane=None,
+    priorytet=None,
+    powtarzalnosc=None
+)</dt><dd><span class="code">Edytuje&nbsp;istniejące&nbsp;zadanie.<br>
+&nbsp;<br>
+:param&nbsp;indeks:&nbsp;Indeks&nbsp;zadania&nbsp;do&nbsp;edycji.<br>
+:param&nbsp;tytul:&nbsp;Nowy&nbsp;tytuł&nbsp;zadania&nbsp;(opcjonalne).<br>
+:param&nbsp;opis:&nbsp;Nowy&nbsp;opis&nbsp;zadania&nbsp;(opcjonalne).<br>
+:param&nbsp;termin:&nbsp;Nowy&nbsp;termin&nbsp;wykonania&nbsp;(opcjonalne).<br>
+:param&nbsp;wykonane:&nbsp;Nowy&nbsp;status&nbsp;wykonania&nbsp;(opcjonalne).<br>
+:param&nbsp;priorytet:&nbsp;Nowy&nbsp;priorytet&nbsp;(opcjonalne).<br>
+:param&nbsp;powtarzalnosc:&nbsp;Nowa&nbsp;powtarzalność&nbsp;(opcjonalne).</span></dd></dl>
+
+<dl><dt><a name="ManagerZadan-odczytajZadaniaZPliku"><strong>odczytajZadaniaZPliku</strong></a> = wzbogaconaFunkcja(*args, **kwargs)<span class="grey"><span class="heading-text"> from pomiarCzasuFunkcji.<locals></span></span></dt></dl>
+
+<dl><dt><a name="ManagerZadan-oznaczZadanie"><strong>oznaczZadanie</strong></a>(self, indeks, value=True)</dt><dd><span class="code">Oznacza&nbsp;zadanie&nbsp;jako&nbsp;wykonane&nbsp;lub&nbsp;niewykonane.<br>
+&nbsp;<br>
+:param&nbsp;indeks:&nbsp;Indeks&nbsp;zadania,&nbsp;które&nbsp;ma&nbsp;być&nbsp;oznaczone.<br>
+:param&nbsp;value:&nbsp;Flaga,&nbsp;która&nbsp;określa,&nbsp;czy&nbsp;zadanie&nbsp;ma&nbsp;być&nbsp;oznaczone&nbsp;jako&nbsp;wykonane&nbsp;(domyślnie&nbsp;True).</span></dd></dl>
+
+<dl><dt><a name="ManagerZadan-parse_date"><strong>parse_date</strong></a>(self, date_string)</dt><dd><span class="code">Parsuje&nbsp;podany&nbsp;ciąg&nbsp;znaków&nbsp;reprezentujący&nbsp;datę&nbsp;do&nbsp;obiektu&nbsp;datetime.<br>
+&nbsp;<br>
+Obsługuje&nbsp;różne&nbsp;formaty&nbsp;daty.&nbsp;Jeśli&nbsp;żaden&nbsp;format&nbsp;nie&nbsp;pasuje,&nbsp;zwraca&nbsp;None.<br>
+&nbsp;<br>
+:param&nbsp;date_string:&nbsp;Ciąg&nbsp;znaków&nbsp;reprezentujący&nbsp;datę.<br>
+:return:&nbsp;Obiekt&nbsp;datetime,&nbsp;jeśli&nbsp;parsowanie&nbsp;się&nbsp;powiodło,&nbsp;w&nbsp;przeciwnym&nbsp;razie&nbsp;None.</span></dd></dl>
+
+<dl><dt><a name="ManagerZadan-pokazListeZadan"><strong>pokazListeZadan</strong></a>(self)</dt><dd><span class="code">Wyświetla&nbsp;listę&nbsp;wszystkich&nbsp;zadań&nbsp;w&nbsp;menedżerze.<br>
+&nbsp;<br>
+Zadania&nbsp;są&nbsp;wypisywane&nbsp;na&nbsp;ekranie&nbsp;w&nbsp;kolejności,&nbsp;w&nbsp;jakiej&nbsp;są&nbsp;przechowywane&nbsp;w&nbsp;liście.</span></dd></dl>
+
+<dl><dt><a name="ManagerZadan-sortujZadania"><strong>sortujZadania</strong></a> = wzbogaconaFunkcja(*args, **kwargs)<span class="grey"><span class="heading-text"> from pomiarCzasuFunkcji.<locals></span></span></dt></dl>
+
+<dl><dt><a name="ManagerZadan-usunZadanie"><strong>usunZadanie</strong></a>(self, indeks=0)</dt><dd><span class="code">Usuwa&nbsp;zadanie&nbsp;z&nbsp;listy&nbsp;na&nbsp;podstawie&nbsp;podanego&nbsp;indeksu.<br>
+&nbsp;<br>
+:param&nbsp;indeks:&nbsp;Indeks&nbsp;zadania&nbsp;do&nbsp;usunięcia.&nbsp;Domyślnie&nbsp;0.</span></dd></dl>
+
+<dl><dt><a name="ManagerZadan-zapiszZadaniaDoPliku"><strong>zapiszZadaniaDoPliku</strong></a> = wzbogaconaFunkcja(*args, **kwargs)<span class="grey"><span class="heading-text"> from pomiarCzasuFunkcji.<locals></span></span></dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Zadanie">class <strong>Zadanie</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Zadanie">Zadanie</a>(tytul,&nbsp;opis,&nbsp;termin,&nbsp;wykonane)<br>
+&nbsp;<br>
+Reprezentuje&nbsp;pojedyncze&nbsp;zadanie.<br>
+&nbsp;<br>
+:param&nbsp;tytul:&nbsp;Tytuł&nbsp;zadania.<br>
+:param&nbsp;opis:&nbsp;Opis&nbsp;zadania.<br>
+:param&nbsp;termin:&nbsp;Termin&nbsp;wykonania&nbsp;zadania.<br>
+:param&nbsp;wykonane:&nbsp;Flaga&nbsp;określająca,&nbsp;czy&nbsp;zadanie&nbsp;zostało&nbsp;wykonane.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="Zadanie-__init__"><strong>__init__</strong></a>(self, tytul, opis, termin, wykonane)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="Zadanie-__str__"><strong>__str__</strong></a>(self)</dt><dd><span class="code">Zwraca&nbsp;reprezentację&nbsp;tekstową&nbsp;zadania.<br>
+&nbsp;<br>
+:return:&nbsp;Opis&nbsp;zadania&nbsp;w&nbsp;formacie&nbsp;tekstowym.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="ZadaniePriorytetowe">class <strong>ZadaniePriorytetowe</strong></a>(<a href="zadania.html#Zadanie">Zadanie</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#ZadaniePriorytetowe">ZadaniePriorytetowe</a>(tytul,&nbsp;opis,&nbsp;termin,&nbsp;wykonane,&nbsp;priorytet)<br>
+&nbsp;<br>
+Reprezentuje&nbsp;zadanie&nbsp;priorytetowe.<br>
+&nbsp;<br>
+:param&nbsp;tytul:&nbsp;Tytuł&nbsp;zadania.<br>
+:param&nbsp;opis:&nbsp;Opis&nbsp;zadania.<br>
+:param&nbsp;termin:&nbsp;Termin&nbsp;wykonania&nbsp;zadania.<br>
+:param&nbsp;wykonane:&nbsp;Flaga&nbsp;określająca,&nbsp;czy&nbsp;zadanie&nbsp;zostało&nbsp;wykonane.<br>
+:param&nbsp;priorytet:&nbsp;Poziom&nbsp;priorytetu&nbsp;zadania.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="zadania.html#ZadaniePriorytetowe">ZadaniePriorytetowe</a></dd>
+<dd><a href="zadania.html#Zadanie">Zadanie</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ZadaniePriorytetowe-__init__"><strong>__init__</strong></a>(self, tytul, opis, termin, wykonane, priorytet)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="ZadaniePriorytetowe-__str__"><strong>__str__</strong></a>(self)</dt><dd><span class="code">Zwraca&nbsp;reprezentację&nbsp;tekstową&nbsp;zadania&nbsp;priorytetowego.<br>
+&nbsp;<br>
+:return:&nbsp;Opis&nbsp;zadania&nbsp;priorytetowego&nbsp;w&nbsp;formacie&nbsp;tekstowym.</span></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="zadania.html#Zadanie">Zadanie</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="ZadanieRegularne">class <strong>ZadanieRegularne</strong></a>(<a href="zadania.html#Zadanie">Zadanie</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#ZadanieRegularne">ZadanieRegularne</a>(tytul,&nbsp;opis,&nbsp;termin,&nbsp;wykonane,&nbsp;powtarzalnosc)<br>
+&nbsp;<br>
+Reprezentuje&nbsp;zadanie&nbsp;regularne.<br>
+&nbsp;<br>
+:param&nbsp;tytul:&nbsp;Tytuł&nbsp;zadania.<br>
+:param&nbsp;opis:&nbsp;Opis&nbsp;zadania.<br>
+:param&nbsp;termin:&nbsp;Termin&nbsp;wykonania&nbsp;zadania.<br>
+:param&nbsp;wykonane:&nbsp;Flaga&nbsp;określająca,&nbsp;czy&nbsp;zadanie&nbsp;zostało&nbsp;wykonane.<br>
+:param&nbsp;powtarzalnosc:&nbsp;Opis&nbsp;powtarzalności&nbsp;zadania.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="zadania.html#ZadanieRegularne">ZadanieRegularne</a></dd>
+<dd><a href="zadania.html#Zadanie">Zadanie</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ZadanieRegularne-__init__"><strong>__init__</strong></a>(self, tytul, opis, termin, wykonane, powtarzalnosc)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="ZadanieRegularne-__str__"><strong>__str__</strong></a>(self)</dt><dd><span class="code">Zwraca&nbsp;reprezentację&nbsp;tekstową&nbsp;zadania&nbsp;regularnego.<br>
+&nbsp;<br>
+:return:&nbsp;Opis&nbsp;zadania&nbsp;regularnego&nbsp;w&nbsp;formacie&nbsp;tekstowym.</span></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="zadania.html#Zadanie">Zadanie</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-pomiarCzasuFunkcji"><strong>pomiarCzasuFunkcji</strong></a>(funkcja)</dt></dl>
+</td></tr></table>
+</body></html>
